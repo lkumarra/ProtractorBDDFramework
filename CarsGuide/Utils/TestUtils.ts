@@ -86,7 +86,7 @@ export class Utilities {
      */
     public async selectByVisibleText(locator: Locator, text: string) {
         await this.clickOnElement(locator);
-        await this.clickOnElement(by.xpath("//option[text()='" + text + "']"))
+        await this.clickOnElement(by.xpath(await this.getXpathByText("option",text)))
     }
 
     /**
@@ -114,5 +114,25 @@ export class Utilities {
     public async pressSPACE(locator: Locator) {
         let element: ElementFinder = await this.getElementFinder(locator);
         await element.sendKeys(Key.SPACE);
+    }
+
+    /**
+     * Return the xpath from text
+     * @param text text to design xpath
+     */
+    public async getXpathByText(tagName:string, text:string):Promise<string>{
+        let xpath:string = "//"+tagName+"[text()='" + text + "']"
+        return xpath;
+    }
+
+    /**
+     * Make xpath
+     * @param tagName Tag name to design xpath
+     * @param attribute Attribute name
+     * @param value attribute alue
+     */
+    public async makeXpath(tagName:string, attribute:string, value:string){
+        let xpath:string = "//"+tagName+"[@"+attribute+"='"+value+"']"
+        return xpath;
     }
 }
