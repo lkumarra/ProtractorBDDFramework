@@ -1,0 +1,37 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "es5",
+    "downlevelIteration": true,
+    "lib": ["es2017"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "declaration": false,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "noEmitOnError": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "CarsGuideJs/",
+    "types": [
+      "node",
+      "jasmine",
+      "jasminewd2",
+      "cucumber"
+    ]
+  },
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "genDir": "./e2e_tests/lib-gen-dir/"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "CarsGuide",
+  ]
+}

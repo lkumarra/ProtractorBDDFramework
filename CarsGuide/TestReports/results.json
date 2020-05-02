@@ -1,0 +1,434 @@
+[
+  {
+    "description": "    In order to validate that\n    the search cars page is working fine\n    we will do the acceptance testing",
+    "keyword": "Feature",
+    "name": "Acceptance testing to validate Search cars page is working fine",
+    "line": 2,
+    "id": "acceptance-testing-to-validate-search-cars-page-is-working-fine",
+    "tags": [
+      {
+        "name": "@Search-Cars",
+        "line": 1
+      }
+    ],
+    "uri": "CarsGuide\\Features\\SearchCars.feature",
+    "elements": [
+      {
+        "id": "acceptance-testing-to-validate-search-cars-page-is-working-fine;validate-search-cars-page",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Validate search cars page",
+        "tags": [
+          {
+            "name": "@Search-Cars",
+            "line": 1
+          },
+          {
+            "name": "@Search-Cars-Positive",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am on the Hompe Page \"https://www.carsguide.com.au/\" of cars guide website",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6895000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Menu"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "buy+sell"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "reviews"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "news"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "advice"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "pricing+specs"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "guides"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I move to menu",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I click on \"Search Car\" link",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4734000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I select Make as \"BMW Alpina\"",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 648000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I select model as \"B5\"",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 270000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I select location as \"ACT - All\"",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 301000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I select price as \"$100,000\"",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 222000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I click on \"Find My Next Car\" Button",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 343000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "I should see list of searched cars",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "The page title should be \"Bmw Alpina B5 Under 100000 for Sale ACT | carsguide\"",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    In order to validate that\n    the used cars page is working fine\n    we will do the acceptance testing",
+    "keyword": "Feature",
+    "name": "Acceptance testing to validate used cars page is working fine",
+    "line": 2,
+    "id": "acceptance-testing-to-validate-used-cars-page-is-working-fine",
+    "tags": [
+      {
+        "name": "@Used-Search-Cars",
+        "line": 1
+      }
+    ],
+    "uri": "CarsGuide\\Features\\UsedCars.feature",
+    "elements": [
+      {
+        "id": "acceptance-testing-to-validate-used-cars-page-is-working-fine;validate-search-cars-page",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Validate search cars page",
+        "tags": [
+          {
+            "name": "@Used-Search-Cars",
+            "line": 1
+          },
+          {
+            "name": "@Used-Search-Cars-Positive",
+            "line": 18
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the Hompe Page \"https://www.carsguide.com.au/\" of cars guide website to test used search cars",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 668000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Menu"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "buy+sell"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "reviews"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "news"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "advice"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "pricing+specs"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "guides"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I move to menu to select used cars",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click on \"Used Car\" link on buy and sell menu",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3445000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I select  \"Audi\" as brand",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1097000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I select  \"A4\" as model",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 336000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I select  \"ACT - All\" as location",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 241000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I select  \"$100,000\" as price",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 263000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I click on \"Find My Next Car\" Button on used search cars",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 396000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I should see list of searched cars on used search car",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "The page title should be \"Used Audi A4 Under 100000 for Sale ACT | carsguide\" of used searched car",
+            "match": {
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:130"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
