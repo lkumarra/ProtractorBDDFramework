@@ -36,11 +36,11 @@
             "line": 9,
             "name": "I am on the Hompe Page \"https://www.carsguide.com.au/\" of cars guide website",
             "match": {
-              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:48"
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:46"
             },
             "result": {
               "status": "passed",
-              "duration": 10544000000
+              "duration": 10811000000
             }
           },
           {
@@ -89,11 +89,11 @@
             "line": 10,
             "name": "I move to menu",
             "match": {
-              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:58"
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:56"
             },
             "result": {
               "status": "passed",
-              "duration": 39000000
+              "duration": 49000000
             }
           },
           {
@@ -102,11 +102,11 @@
             "line": 18,
             "name": "I click on \"Search Car\" link",
             "match": {
-              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:68"
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:66"
             },
             "result": {
               "status": "passed",
-              "duration": 2708000000
+              "duration": 2165000000
             }
           },
           {
@@ -115,11 +115,11 @@
             "line": 19,
             "name": "I select Make as \"BMW Alpina\"",
             "match": {
-              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:78"
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:76"
             },
             "result": {
               "status": "passed",
-              "duration": 4203000000
+              "duration": 3058000000
             }
           },
           {
@@ -128,11 +128,11 @@
             "line": 20,
             "name": "I select model as \"B5\"",
             "match": {
-              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:88"
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:86"
             },
             "result": {
               "status": "passed",
-              "duration": 687000000
+              "duration": 1034000000
             }
           },
           {
@@ -141,11 +141,11 @@
             "line": 21,
             "name": "I select location as \"ACT - All\"",
             "match": {
-              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:98"
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:96"
             },
             "result": {
               "status": "passed",
-              "duration": 266000000
+              "duration": 883000000
             }
           },
           {
@@ -154,11 +154,11 @@
             "line": 22,
             "name": "I select price as \"$100,000\"",
             "match": {
-              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:108"
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:106"
             },
             "result": {
               "status": "passed",
-              "duration": 771000000
+              "duration": 307000000
             }
           },
           {
@@ -167,11 +167,11 @@
             "line": 23,
             "name": "I click on \"Find My Next Car\" Button",
             "match": {
-              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:118"
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:116"
             },
             "result": {
               "status": "passed",
-              "duration": 473000000
+              "duration": 976000000
             }
           },
           {
@@ -180,7 +180,7 @@
             "line": 24,
             "name": "I should see list of searched cars",
             "match": {
-              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:128"
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:126"
             },
             "result": {
               "status": "passed",
@@ -193,11 +193,11 @@
             "line": 25,
             "name": "The page title should be \"Bmw Alpina B5 Under 100000 for Sale ACT | carsguide\"",
             "match": {
-              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:130"
+              "location": "CarsGuideJs\\Steps\\SeachCarSteps.js:128"
             },
             "result": {
               "status": "passed",
-              "duration": 14000000
+              "duration": 119000000
             }
           },
           {
@@ -263,11 +263,11 @@
             "line": 8,
             "name": "I am on the Hompe Page \"https://www.carsguide.com.au/\" of cars guide website to test used search cars",
             "match": {
-              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:48"
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:46"
             },
             "result": {
               "status": "passed",
-              "duration": 1604000000
+              "duration": 902000000
             }
           },
           {
@@ -316,7 +316,7 @@
             "line": 9,
             "name": "I move to menu to select used cars",
             "match": {
-              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:58"
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:56"
             },
             "result": {
               "status": "passed",
@@ -329,11 +329,11 @@
             "line": 20,
             "name": "I click on \"Used Car\" link on buy and sell menu",
             "match": {
-              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:68"
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:66"
             },
             "result": {
               "status": "passed",
-              "duration": 2432000000
+              "duration": 2764000000
             }
           },
           {
@@ -342,11 +342,11 @@
             "line": 21,
             "name": "I select  \"Audi\" as brand",
             "match": {
-              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:78"
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:76"
             },
             "result": {
               "status": "passed",
-              "duration": 911000000
+              "duration": 1103000000
             }
           },
           {
@@ -355,11 +355,11 @@
             "line": 22,
             "name": "I select  \"A4\" as model",
             "match": {
-              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:88"
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:86"
             },
             "result": {
               "status": "passed",
-              "duration": 296000000
+              "duration": 326000000
             }
           },
           {
@@ -368,11 +368,11 @@
             "line": 23,
             "name": "I select  \"ACT - All\" as location",
             "match": {
-              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:98"
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:96"
             },
             "result": {
               "status": "passed",
-              "duration": 216000000
+              "duration": 224000000
             }
           },
           {
@@ -381,11 +381,11 @@
             "line": 24,
             "name": "I select  \"$100,000\" as price",
             "match": {
-              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:108"
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:106"
             },
             "result": {
               "status": "passed",
-              "duration": 251000000
+              "duration": 272000000
             }
           },
           {
@@ -394,11 +394,11 @@
             "line": 25,
             "name": "I click on \"Find My Next Car\" Button on used search cars",
             "match": {
-              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:118"
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:116"
             },
             "result": {
               "status": "passed",
-              "duration": 564000000
+              "duration": 1319000000
             }
           },
           {
@@ -407,11 +407,11 @@
             "line": 26,
             "name": "I should see list of searched cars on used search car",
             "match": {
-              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:128"
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:126"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -420,11 +420,11 @@
             "line": 27,
             "name": "The page title should be \"Used Audi A4 Under 100000 for Sale ACT | carsguide\" of used searched car",
             "match": {
-              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:133"
+              "location": "CarsGuideJs\\Steps\\UsedCarSteps.js:131"
             },
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 55000000
             }
           },
           {

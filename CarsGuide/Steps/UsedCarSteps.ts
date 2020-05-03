@@ -2,9 +2,7 @@ import { Given, When, Then, setDefaultTimeout } from 'cucumber';
 import { HomePageActions } from '../Pages/Actions/CarsGuideHomePage';
 import { UsedCarAction } from '../Pages/Actions/CarsGuideUsedCars';
 import { TestBase } from '../TestBase/TestBase';
-import { browser } from 'protractor';
-import * as chai from 'chai';
-const expect = chai.expect;
+import { Utilities } from '../Utils/TestUtils';
 let homePageActions: HomePageActions = new HomePageActions();
 let usedCarAction: UsedCarAction;
 setDefaultTimeout(60 * 1000);
@@ -47,5 +45,5 @@ Then('I should see list of searched cars on used search car', async () => {
 });
 
 Then('The page title should be {string} of used searched car', async (title:string) => {
-    expect(await browser.getTitle()).to.equal(title)
+    Utilities.verifyEquals(await Utilities.getTitle(), title);
 });

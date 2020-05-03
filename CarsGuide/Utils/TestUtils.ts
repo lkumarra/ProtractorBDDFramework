@@ -1,6 +1,8 @@
 import { ElementFinder, ExpectedConditions, ProtractorExpectedConditions, browser, Locator, Key, by } from 'protractor';
 let until: ProtractorExpectedConditions = ExpectedConditions;
 let utilities: Utilities;
+import * as chai from 'chai';
+const expect = chai.expect;
 export class Utilities {
 
     /**
@@ -86,7 +88,7 @@ export class Utilities {
      */
     public async selectByVisibleText(locator: Locator, text: string) {
         await this.clickOnElement(locator);
-        await this.clickOnElement(by.xpath(await this.getXpathByText("option",text)))
+        await this.clickOnElement(by.xpath(await this.getXpathByText("option", text)))
     }
 
     /**
@@ -120,8 +122,8 @@ export class Utilities {
      * Return the xpath from text
      * @param text text to design xpath
      */
-    public async getXpathByText(tagName:string, text:string):Promise<string>{
-        let xpath:string = "//"+tagName+"[text()='" + text + "']"
+    public async getXpathByText(tagName: string, text: string): Promise<string> {
+        let xpath: string = "//" + tagName + "[text()='" + text + "']"
         return xpath;
     }
 
@@ -131,8 +133,51 @@ export class Utilities {
      * @param attribute Attribute name
      * @param value attribute alue
      */
-    public async makeXpath(tagName:string, attribute:string, value:string){
-        let xpath:string = "//"+tagName+"[@"+attribute+"='"+value+"']"
+    public async makeXpath(tagName: string, attribute: string, value: string) {
+        let xpath: string = "//" + tagName + "[@" + attribute + "='" + value + "']"
         return xpath;
     }
+
+    /**
+     * Verify the actual and expected value.
+     * @param actual Actual value.
+     * @param expected Expected value.
+     */
+    public static async verifyEquals(actual: string, expected: string) {
+        expect(actual).to.equal(expected, "Incorrect value is displayed")
+    }
+
+    /**
+     * Verify the actual and expected value.
+     * @param actal Actual value.
+     * @param expected Expected value.
+     */
+    public static veifyEquals(actal: number, expected: number) {
+        expect(actal).to.equal(expected)
+    }
+
+    /**
+     * Verify the given value is true.
+     * @param value value to verify
+     */
+    public static verifyTrue(value: boolean) {
+        expect(value).to.true;
+    }
+
+    /**
+     * Verify the given value is false.
+     * @param value vale to verify.
+     */
+    public static verifyFalse(value: boolean) {
+        expect(value).to.false;
+    }
+
+    /**
+     * Return the title of the given page.
+     */
+    public static async getTitle(): Promise<string> {
+        return await browser.getTitle();
+    }
+
+
 }
