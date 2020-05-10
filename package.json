@@ -46,12 +46,11 @@
     "cucumber-pretty": "6.0.0"
   },
   "scripts": {
-    "webdrivermanager:useVersion": "node node_modules/protractor/bin/webdriver-manager update --versions.chrome 76.0.3809.68",
     "webdrivermanager:update": "node node_modules/protractor/bin/webdriver-manager update",
     "webdrivermanager:clean": "node node_modules/protractor/bin/webdriver-manager clean",
     "tsc": "node_modules\\.bin\\tsc",
     "config": "node_modules\\.bin\\protractor ./CarsGuideJs/Config/Config.js",
-    "specflow": "npm run tsc && npm run config"
+    "cucumbertest": "npm run tsc && npm run config"
   },
   "author": "Lavendra Kumar Rajput",
   "license": "ISC",

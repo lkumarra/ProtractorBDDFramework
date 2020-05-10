@@ -20,7 +20,7 @@ export class HomePageActions {
      */
     public async moveToReviews() {
         await utilities.moveToElement(homePageLocatos.reviewsMenuLocator());
-        LogUtils.debugMessage("Move to revies Menu", HomePageActions.name);
+        LogUtils.debugMessage("Move to reviews Menu", HomePageActions.name);
     }
 
     /**
