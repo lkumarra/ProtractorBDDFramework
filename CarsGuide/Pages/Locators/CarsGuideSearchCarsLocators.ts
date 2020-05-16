@@ -21,35 +21,35 @@ export class SearchCarsLocators {
     /**
      * Return the locator of cars make dropdown on searchcars page.
      */
-    public serchCarsMakeDropdownLocator(): Locator {
+    public getSerchCarsMakeDropdownLocator(): Locator {
         return this.serchCarsMakeDropdown;
     }
 
     /**
      * Return the locator of cars model dropdown on searchcars page.
      */
-    public searchCarsModelDropdownLocator(): Locator {
+    public getSearchCarsModelDropdownLocator(): Locator {
         return this.searchCarsModelDropdown;
     }
 
     /**
      * Return the locator of cars location dropdown on searchcars page.
      */
-    public seachCarsLocationDropdownLocator(): Locator {
+    public getSeachCarsLocationDropdownLocator(): Locator {
         return this.seachCarsLocationDropdown;
     }
 
     /**
      * Return the locator of cars price dropdown loactor on searchcars page.
      */
-    public searchCarsPriceDropdwonLocator(): Locator {
+    public getSearchCarsPriceDropdwonLocator(): Locator {
         return this.searchCarsPriceDropdwon;
     }
 
     /**
      * Return the locator of Find My Next Cars Button on search cars page.
      */
-    public searchCarsSearchSubmitButtonLocator(): Locator {
+    public getSearchCarsSearchSubmitButtonLocator(): Locator {
         return this.searchCarsSearchSubmitButton;
     }
 }

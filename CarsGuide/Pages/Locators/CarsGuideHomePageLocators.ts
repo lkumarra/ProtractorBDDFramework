@@ -24,56 +24,56 @@ export class HomePageLocators {
     /**
      * Return the locator of buy+sell menu on carsguide home page.
      */
-    public buySellMenuLocator(): Locator {
+    public getBuySellMenuLocator(): Locator {
         return this.buySellMenu;
     }
 
     /**
      * Return the locator of reviews menu on carsguide home page.
      */
-    public reviewsMenuLocator(): Locator {
+    public getReviewsMenuLocator(): Locator {
         return this.reviewsMenu;
     }
 
     /**
      * Return the locator of news menu on carsguide home page.
      */
-    public newsMenuLocator(): Locator {
+    public getNewsMenuLocator(): Locator {
         return this.newsMenu
     }
 
     /**
      * Return the locator of advice menu on cars guide home page.
      */
-    public adviceMenuLocator(): Locator {
+    public getAdviceMenuLocator(): Locator {
         return this.adviceMenu;
     }
 
     /**
      * Return the locator of price and spec menu on cars guide home page.
      */
-    public priceAndSpecMenuLocator(): Locator {
+    public getPriceAndSpecMenuLocator(): Locator {
         return this.priceAndSpecMenu;
     }
 
     /**
      * Return the locator of guides menu on cars guide home page.
      */
-    public guidesMenuLocator(): Locator {
+    public getGuidesMenuLocator(): Locator {
         return this.guidesMenu;
     }
 
     /**
      * Return the locator of search menu on cars guide home page.
      */
-    public searchCarsMenuLocator(): Locator {
+    public getSearchCarsMenuLocator(): Locator {
         return this.searchCarsMenu;
     }
 
     /**
      * Return the locator of used cars menu on cars guide home page.
      */
-    public usedCarsMenuLocator(): Locator {
+    public getUsedCarsMenuLocator(): Locator {
         return this.usedCarsMenu;
     }
 

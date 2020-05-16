@@ -10,7 +10,7 @@ export class SearchCarsActions {
      * @param carsMake Cars make to select.
      */
     public async selectSearchCarMake(carsMake: string) {
-        await utilities.selectByVisibleText(searchCarsLocators.serchCarsMakeDropdownLocator(), carsMake);
+        await utilities.selectByVisibleText(searchCarsLocators.getSerchCarsMakeDropdownLocator(), carsMake);
         LogUtils.debugMessage("Car Make " + carsMake + " is selected", SearchCarsActions.name);
     }
 
@@ -19,7 +19,7 @@ export class SearchCarsActions {
      * @param model Car model to select.
      */
     public async selectSerchCarModel(model: string) {
-        await utilities.selectByVisibleText(searchCarsLocators.searchCarsModelDropdownLocator(), model);
+        await utilities.selectByVisibleText(searchCarsLocators.getSearchCarsModelDropdownLocator(), model);
         LogUtils.debugMessage("Car model " + model + " is selected", SearchCarsActions.name);
     }
 
@@ -28,7 +28,7 @@ export class SearchCarsActions {
      * @param location location to select.
      */
     public async selectSearchCarLocation(location: string) {
-        await utilities.selectByVisibleText(searchCarsLocators.seachCarsLocationDropdownLocator(), location);
+        await utilities.selectByVisibleText(searchCarsLocators.getSeachCarsLocationDropdownLocator(), location);
         LogUtils.debugMessage("Car location " + location + " is selected", SearchCarsActions.name);
     }
 
@@ -37,7 +37,7 @@ export class SearchCarsActions {
      * @param price Price to select.
      */
     public async selectSearchCarPrice(price: string) {
-        await utilities.selectByVisibleText(searchCarsLocators.searchCarsPriceDropdwonLocator(), price);
+        await utilities.selectByVisibleText(searchCarsLocators.getSearchCarsPriceDropdwonLocator(), price);
         LogUtils.debugMessage("Car price " + price + " is selected", SearchCarsActions.name);
     }
 
@@ -45,7 +45,7 @@ export class SearchCarsActions {
      * Click on find ny next car.
      */
     public async clickOnFindMyNextCar() {
-        await utilities.clickOnElement(searchCarsLocators.searchCarsSearchSubmitButtonLocator());
+        await utilities.clickOnElement(searchCarsLocators.getSearchCarsSearchSubmitButtonLocator());
         LogUtils.debugMessage("Clicked on Find My Next Car", SearchCarsActions.name);
     }
 

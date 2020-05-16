@@ -10,7 +10,7 @@ export class UsedCarAction {
      * @param make Make to select.
      */
     public async selectUsedCarMake(make: string) {
-        await utilities.selectByVisibleText(usedCarLocators.usedCarsMakeDropdownLocator(), make);
+        await utilities.selectByVisibleText(usedCarLocators.getUsedCarsMakeDropdownLocator(), make);
         LogUtils.debugMessage("Car Make " + make + " is selected", UsedCarAction.name);
     }
 
@@ -19,7 +19,7 @@ export class UsedCarAction {
      * @param model Model to select.
      */
     public async selectUsedCarModel(model: string) {
-        await utilities.selectByVisibleText(usedCarLocators.usedCarsModelDropdownLocator(), model);
+        await utilities.selectByVisibleText(usedCarLocators.getUsedCarsModelDropdownLocator(), model);
         LogUtils.debugMessage("Car Model " + model + " is selected", UsedCarAction.name);
     }
 
@@ -28,7 +28,7 @@ export class UsedCarAction {
      * @param location location to select.
      */
     public async selectUsedCarLocation(location: string) {
-        await utilities.selectByVisibleText(usedCarLocators.usedCarsLocationDropdownLocator(), location);
+        await utilities.selectByVisibleText(usedCarLocators.getUsedCarsLocationDropdownLocator(), location);
         LogUtils.debugMessage("Car location " + location + " is selected", UsedCarAction.name);
     }
 
@@ -37,7 +37,7 @@ export class UsedCarAction {
      * @param price price to select.
      */
     public async seletUsedCarPrice(price: string) {
-        await utilities.selectByVisibleText(usedCarLocators.usedCarsPriceDropdwonLocator(), price);
+        await utilities.selectByVisibleText(usedCarLocators.getUsedCarsPriceDropdwonLocator(), price);
         LogUtils.debugMessage("Car price " + price + " is selected", UsedCarAction.name);
     }
 
@@ -45,7 +45,7 @@ export class UsedCarAction {
      * Click on find my next car on used car page.
      */
     public async clickOnFindMyNextCar() {
-        await utilities.clickOnElement(usedCarLocators.usedCarsSearchSubmitButtonLocator());
+        await utilities.clickOnElement(usedCarLocators.getUsedCarsSearchSubmitButtonLocator());
         LogUtils.debugMessage("Clicked on Find My Next Car", UsedCarAction.name);
     }
 }

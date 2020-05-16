@@ -11,6 +11,11 @@ export let config: Config = {
   specs: FeaturesSuite,
   capabilities: {
     'browserName': "chrome",
+    'loggingPrefs': {
+      'driver': 'WARNING',
+      'server': 'WARNING',
+      'browser': 'INFO'
+  }
   },
   useAllAngular2AppRoots: true,
   directConnect: true,
