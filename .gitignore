@@ -1,0 +1,11 @@
+node_modules
+CarsGuideJs
+.vscode
+output.txt
+CarsGuide.log
+CarsGuide.log.%d{*
+debug.log
+CarsGuide/TestReports
+CarsGuide/TestReports/results.html
+CarsGuide/TestReports/results.json
+debug.log

@@ -1,0 +1,1 @@
+1. In order to Run the Test Cases Simply Run the TestRunner.bat file or TestRunner.exe
