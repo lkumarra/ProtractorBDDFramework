@@ -10,7 +10,7 @@ Commands to Execute the TestCases.
 3. npm run cucumbertest("To Start the Executaion")
 
 Reports will Gererated in :
-2. TestReports Folder ("Html Reports")
+1. TestReports Folder ("Html Reports")
 
 TestExecution can simply started by running:
 1. TestRunner.exe("This Executable will intall all dependencies and start executation")
