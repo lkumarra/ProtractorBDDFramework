@@ -1,4 +1,5 @@
-import { Locator, by } from "protractor";
+import { Locator, by, ElementFinder } from "protractor";
+import { findBy } from "../../Utils/PageFactory";
 let homePageLocators: HomePageLocators;
 export class HomePageLocators {
   /**
@@ -11,70 +12,91 @@ export class HomePageLocators {
     return homePageLocators;
   }
 
-  private buySellMenu: Locator = by.xpath(
-    "//a[@data-gtm-label = 'top nav car buy and sell']"
-  );
-  private reviewsMenu: Locator = by.linkText("reviews");
-  private newsMenu: Locator = by.linkText("news");
-  private adviceMenu: Locator = by.linkText("advice");
-  private priceAndSpecMenu: Locator = by.linkText("pricing + specs");
-  private guidesMenu: Locator = by.linkText("guides");
-  private searchCarsMenu: Locator = by.linkText("Search Cars");
-  private usedCarsMenu: Locator = by.linkText("Used");
+  //#region PageFactory
+
+  @findBy("Xpath", "//a[@data-gtm-label = 'top nav car buy and sell']")
+  private buySellMenu: ElementFinder;
+
+  @findBy("LinkText", "reviews")
+  private reviewsMenu: ElementFinder;
+
+  @findBy("LinkText", "news")
+  private newsMenu: ElementFinder;
+
+  @findBy("LinkText", "news")
+  private adviceMenu: ElementFinder;
+
+  @findBy("LinkText", "pricing + specs")
+  private priceAndSpecMenu: ElementFinder;
+
+  @findBy("LinkText", "guides")
+  private guidesMenu: ElementFinder;
+
+  @findBy("LinkText", "Search Cars")
+  private searchCarsMenu: ElementFinder;
+
+  @findBy("LinkText", "Used")
+  private userCarMenu: ElementFinder;
+
+  //#endregion
+
+  //#region  GetterMethods
 
   /**
    * Return the locator of buy+sell menu on carsguide home page.
    */
-  public getBuySellMenuLocator(): Locator {
+  public getBuySellMenuLocator(): ElementFinder {
     return this.buySellMenu;
   }
 
   /**
    * Return the locator of reviews menu on carsguide home page.
    */
-  public getReviewsMenuLocator(): Locator {
+  public getReviewsMenuLocator(): ElementFinder {
     return this.reviewsMenu;
   }
 
   /**
    * Return the locator of news menu on carsguide home page.
    */
-  public getNewsMenuLocator(): Locator {
+  public getNewsMenuLocator(): ElementFinder {
     return this.newsMenu;
   }
 
   /**
    * Return the locator of advice menu on cars guide home page.
    */
-  public getAdviceMenuLocator(): Locator {
+  public getAdviceMenuLocator(): ElementFinder {
     return this.adviceMenu;
   }
 
   /**
    * Return the locator of price and spec menu on cars guide home page.
    */
-  public getPriceAndSpecMenuLocator(): Locator {
+  public getPriceAndSpecMenuLocator(): ElementFinder {
     return this.priceAndSpecMenu;
   }
 
   /**
    * Return the locator of guides menu on cars guide home page.
    */
-  public getGuidesMenuLocator(): Locator {
+  public getGuidesMenuLocator(): ElementFinder {
     return this.guidesMenu;
   }
 
   /**
    * Return the locator of search menu on cars guide home page.
    */
-  public getSearchCarsMenuLocator(): Locator {
+  public getSearchCarsMenuLocator(): ElementFinder {
     return this.searchCarsMenu;
   }
 
   /**
    * Return the locator of used cars menu on cars guide home page.
    */
-  public getUsedCarsMenuLocator(): Locator {
-    return this.usedCarsMenu;
+  public getUsedCarsMenuLocator(): ElementFinder {
+    return this.userCarMenu;
   }
+
+  //#endregion
 }

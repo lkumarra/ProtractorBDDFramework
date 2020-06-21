@@ -1,4 +1,5 @@
-import { Locator, by } from "protractor";
+import { ElementFinder } from "protractor";
+import { findBy } from "../../Utils/PageFactory";
 let usedCarLocators: UsedCarLocators;
 export class UsedCarLocators {
   /**
@@ -11,44 +12,61 @@ export class UsedCarLocators {
     return usedCarLocators;
   }
 
-  private usedCarsMakeDropdown: Locator = by.css("#makes");
-  private usedCarsModelDropdown: Locator = by.css("#models");
-  private usedCarsLocationDropdown: Locator = by.css("#locations");
-  private usedCarsPriceDropdwon: Locator = by.css("#priceTo");
-  private usedCarsSearchSubmitButton: Locator = by.css("#search-submit");
+  //#region  PageFactoory
+
+  @findBy("Css", "#makes")
+  private usedCarsMakeDropdown: ElementFinder;
+
+  @findBy("Css", "#models")
+  private usedCarsModelDropdown: ElementFinder;
+
+  @findBy("Css", "#locations")
+  private usedCarsLocationDropdown: ElementFinder;
+
+  @findBy("Css", "#priceTo")
+  private usedCarsPriceDropdwon: ElementFinder;
+
+  @findBy("Css", "#search-submit")
+  private usedCarsSearchSubmitButton: ElementFinder;
+
+  //#endregion
+
+  //#region  GetterMethods
 
   /**
    * Return the locator of cars make dropdown on usedcars page.
    */
-  public getUsedCarsMakeDropdownLocator(): Locator {
+  public getUsedCarsMakeDropdownLocator(): ElementFinder {
     return this.usedCarsMakeDropdown;
   }
 
   /**
    * Return the locator of cars model dropdown on usedcars page.
    */
-  public getUsedCarsModelDropdownLocator(): Locator {
+  public getUsedCarsModelDropdownLocator(): ElementFinder {
     return this.usedCarsModelDropdown;
   }
 
   /**
    * Return the locator of cars location dropdown on usedcars page.
    */
-  public getUsedCarsLocationDropdownLocator(): Locator {
+  public getUsedCarsLocationDropdownLocator(): ElementFinder {
     return this.usedCarsLocationDropdown;
   }
 
   /**
    * Return the locator of cars price dropdown loactor on usedcars page.
    */
-  public getUsedCarsPriceDropdwonLocator(): Locator {
+  public getUsedCarsPriceDropdwonLocator(): ElementFinder {
     return this.usedCarsPriceDropdwon;
   }
 
   /**
    * Return the locator of Find My Next Cars Button on used cars page.
    */
-  public getUsedCarsSearchSubmitButtonLocator(): Locator {
+  public getUsedCarsSearchSubmitButtonLocator(): ElementFinder {
     return this.usedCarsSearchSubmitButton;
   }
+
+  //#endregion
 }

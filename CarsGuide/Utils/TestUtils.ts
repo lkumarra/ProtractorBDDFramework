@@ -10,6 +10,7 @@ import {
 let until: ProtractorExpectedConditions = ExpectedConditions;
 let utilities: Utilities;
 import * as chai from "chai";
+import { element } from "protractor";
 const expect = chai.expect;
 export class Utilities {
   /**
@@ -57,10 +58,9 @@ export class Utilities {
    * Perform click action on the locator
    * @param locator Locator on which click action has performed.
    */
-  public async clickOnElement(locator: Locator) {
-    let element: ElementFinder = await this.getElementFinder(locator);
-    await this.elementToBeClickableWait(element);
-    await element.click();
+  public async clickOnElement(locator: ElementFinder) {
+    await this.elementToBeClickableWait(locator);
+    await locator.click();
   }
 
   /**
@@ -68,10 +68,9 @@ export class Utilities {
    * @param locator Locator to enter the text
    * @param text Text to enter.
    */
-  public async enterTextIntoElement(locator: Locator, text: string) {
-    let element: ElementFinder = await this.getElementFinder(locator);
-    await this.elementToBeClickableWait(element);
-    await element.sendKeys(text);
+  public async enterTextIntoElement(locator: ElementFinder, text: string) {
+    await this.elementToBeClickableWait(locator);
+    await locator.sendKeys(text);
   }
 
   /**
@@ -79,21 +78,19 @@ export class Utilities {
    * @param locator Locator to enter the text
    * @param text Text to enter.
    */
-  public async enterTextWithClear(locator: Locator, text: string) {
-    let element: ElementFinder = await this.getElementFinder(locator);
-    await this.elementToBeClickableWait(element);
-    await element.clear();
-    await element.sendKeys(text);
+  public async enterTextWithClear(locator: ElementFinder, text: string) {
+    await this.elementToBeClickableWait(locator);
+    await locator.clear();
+    await locator.sendKeys(text);
   }
 
   /**
    * Return the text of locator
    * @param locator Locator to get text.
    */
-  public async getElementText(locator: Locator): Promise<string> {
-    let element: ElementFinder = await this.getElementFinder(locator);
-    await this.elementToBeVisibleWait(element);
-    return element.getText();
+  public async getElementText(locator: ElementFinder): Promise<string> {
+    await this.elementToBeVisibleWait(locator);
+    return locator.getText();
   }
 
   /**
@@ -101,10 +98,10 @@ export class Utilities {
    * @param locator locator to select
    * @param text value to select.
    */
-  public async selectByVisibleText(locator: Locator, text: string) {
+  public async selectByVisibleText(locator: ElementFinder, text: string) {
     await this.clickOnElement(locator);
     await this.clickOnElement(
-      by.xpath(await this.getXpathByText("option", text))
+      element(by.xpath(await this.getXpathByText("option", text)))
     );
   }
 
@@ -112,9 +109,8 @@ export class Utilities {
    * Perform mouse move funtion on the locator.
    * @param locator locator on which mouse move action has performed.
    */
-  public async moveToElement(locator: Locator) {
-    let element: ElementFinder = await this.getElementFinder(locator);
-    await browser.actions().mouseMove(element).perform();
+  public async moveToElement(locator: ElementFinder) {
+    await browser.actions().mouseMove(locator).perform();
   }
 
   /**

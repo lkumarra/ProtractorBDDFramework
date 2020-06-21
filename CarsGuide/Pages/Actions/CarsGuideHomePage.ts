@@ -18,7 +18,7 @@ export class HomePageActions {
    * Move to reviews menu.
    */
   public async moveToReviews() {
-    await utilities.moveToElement(homePageLocatos.getReviewsMenuLocator);
+    await utilities.moveToElement(homePageLocatos.getReviewsMenuLocator());
     LogUtils.debugMessage("Move to reviews Menu", HomePageActions.name);
   }
 
