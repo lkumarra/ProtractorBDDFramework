@@ -1,8 +1,9 @@
 import { Given, When, Then, setDefaultTimeout } from "cucumber";
-import { TestBase } from "../TestBase/TestBase";
 import { HomePageActions } from "../Pages/Actions/CarsGuideHomePage";
 import { SearchCarsActions } from "../Pages/Actions/CarsGuideSearchCars";
 import { Utilities } from "../Utils/TestUtils";
+import { Page } from '../Pages/BasePage/Page';
+
 let searchCarsActions: SearchCarsActions;
 let homePageActions: HomePageActions = new HomePageActions();
 setDefaultTimeout(60 * 1000);
@@ -10,7 +11,7 @@ setDefaultTimeout(60 * 1000);
 Given(
   "I am on the Hompe Page {string} of cars guide website",
   async (url: string) => {
-    await TestBase.getUrl(url);
+    await Page.getUrl(url);
   }
 );
 

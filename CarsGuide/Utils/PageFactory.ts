@@ -1,9 +1,9 @@
 import { element, by, ElementFinder } from "protractor";
 
 /**
- * This function will return element finder the basis of how
- * @param how Element finder strategy
- * @param locator Locator
+ * Find element finder on the basis of element finder stretgy such as id, xpath, css, name etc.
+ * @param how element stretgy such as id, xpath.
+ * @param locator Locators for finding element finder.
  */
 function findElementFinder(how: string, locator: string): ElementFinder {
   let webElement: ElementFinder;
@@ -32,13 +32,21 @@ function findElementFinder(how: string, locator: string): ElementFinder {
       webElement = element(by.partialLinkText(locator));
       break;
     }
-    case "NGMODEL": {
+    case "MODEL": {
       webElement = element(by.model(locator));
       break;
+    }
+    case "BINDING": {
+      webElement = element(by.binding(locator));
+      break;
+    }
+    case "EXACTBINDING": {
+      webElement = element(by.exactBinding(locator));
     }
   }
   return webElement;
 }
+
 
 /**
  * Page Factory Decorator

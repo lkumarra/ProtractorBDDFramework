@@ -1,8 +1,10 @@
 import { Utilities } from "../../Utils/TestUtils";
 import { SearchCarsLocators } from "../Locators/CarsGuideSearchCarsLocators";
 import { LogUtils } from "../../LogManager/LogUtils";
+
 let utilities: Utilities = Utilities.getUtilitiesInstane();
 let searchCarsLocators: SearchCarsLocators = SearchCarsLocators.getSearchCarsLocatorsInstance();
+
 export class SearchCarsActions {
   /**
    * Select cars make,

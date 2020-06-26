@@ -3,9 +3,9 @@ import { FeaturesSuite } from "../TestSuite/FeaturesSuite";
 import { StepSuite } from "../TestSuite/StepsSuite";
 import * as nodemailer from "nodemailer";
 import { mailInfo } from "../Utils/MailInfo";
-var reporter = require("cucumber-html-reporter");
-let process = require("process");
-let reportOutput = process.cwd() + "/CarsGuide/TestReports/";
+import * as reporter from "cucumber-html-reporter";
+import * as process from "process";
+let reportOutput: string = process.cwd() + "/CarsGuide/TestReports/";
 export let config: Config = {
   SELENIUM_PROMISE_MANAGER: false,
   specs: FeaturesSuite,
@@ -59,8 +59,8 @@ export let config: Config = {
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-          user: mailInfo.nodeMailer.auth.userEmail, // generated ethereal user
-          pass: mailInfo.nodeMailer.auth.password, // generated ethereal password
+          user: process.env["email"], // generated ethereal user
+          pass: process.env["password"], // generated ethereal password
         },
       });
       // send mail with defined transport object

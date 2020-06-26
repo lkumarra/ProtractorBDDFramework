@@ -1,6 +1,8 @@
 import { ElementFinder } from "protractor";
 import { findBy } from "../../Utils/PageFactory";
+
 let usedCarLocators: UsedCarLocators;
+
 export class UsedCarLocators {
   /**
    * Return the instance of UsedCarLocators page.

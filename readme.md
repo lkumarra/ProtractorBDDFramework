@@ -7,12 +7,12 @@
 # Commands to execute the testcases.
 1. **npm install ("To install all dependencies")**
 2. **npm run webdrivermanager:update("To update or install all executable binaries")**
-3. **npm run cucumbertest("To Start the Executaion")**
+3. **npm run cucumbertest("To Start the Executation")**
 
 # Reports will gererated in :
 1. **TestReports Folder ("Html Reports")**
 
 # TestExecution can simply started by running:
-1. **TestRunner.exe("This executable will install all dependencies and start executation")**
+1. **TestRunner.exe("This executable will first install all required dependencies and start executation")**
 
-# Reports will send to mail also after execution.
+# Reports will send to mail after executation completed.

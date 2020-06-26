@@ -1,6 +1,8 @@
-import { Locator, by, ElementFinder } from "protractor";
+import { ElementFinder } from "protractor";
 import { findBy } from "../../Utils/PageFactory";
+
 let searchCarsLocators: SearchCarsLocators;
+
 export class SearchCarsLocators {
   /**
    * Return the instance of SearchCarsLocators page.

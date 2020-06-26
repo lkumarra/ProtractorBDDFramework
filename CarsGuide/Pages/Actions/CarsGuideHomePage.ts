@@ -3,8 +3,10 @@ import { HomePageLocators } from "../Locators/CarsGuideHomePageLocators";
 import { SearchCarsActions } from "./CarsGuideSearchCars";
 import { UsedCarAction } from "./CarsGuideUsedCars";
 import { LogUtils } from "../../LogManager/LogUtils";
+
 let utilities: Utilities = Utilities.getUtilitiesInstane();
 let homePageLocatos: HomePageLocators = HomePageLocators.getHomePageLocatorInstance();
+
 export class HomePageActions {
   /**
    * Move to buy+sell menu.

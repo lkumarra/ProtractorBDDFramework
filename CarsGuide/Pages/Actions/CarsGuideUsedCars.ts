@@ -1,8 +1,10 @@
 import { Utilities } from "../../Utils/TestUtils";
 import { UsedCarLocators } from "../Locators/CarsGuideUsesCarsLocators";
 import { LogUtils } from "../../LogManager/LogUtils";
+
 let utilities: Utilities = Utilities.getUtilitiesInstane();
 let usedCarLocators: UsedCarLocators = UsedCarLocators.getUsedCarLocatorInstance();
+
 export class UsedCarAction {
   /**
    * Select car make on used car page.
