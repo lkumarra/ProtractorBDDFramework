@@ -64,3 +64,15 @@ export function findBy(how: string, selector: string) {
     });
   };
 }
+export class How {
+  //#endregion Finding Strategy
+  public static XPATH: string = "Xpath";
+  public static ID: string = "Id";
+  public static NAME: string = "Name";
+  public static CSS: string = "Css";
+  public static CLASS: string = "Class";
+  public static MODEL: string = "Model";
+  public static LINKTEXT: string = "Linktext";
+  public static BINDING: string = "Binding";
+  //#endregion
+}

@@ -1,5 +1,5 @@
 import { ElementFinder } from "protractor";
-import { findBy } from "../../Utils/PageFactory";
+import { findBy, How } from '../../Utils/PageFactory';
 
 let searchCarsLocators: SearchCarsLocators;
 
@@ -16,19 +16,19 @@ export class SearchCarsLocators {
 
   //#region  PageFactory
 
-  @findBy("Css", "#makes")
+  @findBy(How.CSS, "#makes")
   private serchCarsMakeDropdown: ElementFinder;
 
-  @findBy("Css", "#models")
+  @findBy(How.CSS, "#models")
   private searchCarsModelDropdown: ElementFinder;
 
-  @findBy("Css", "#locations")
+  @findBy(How.CSS, "#locations")
   private seachCarsLocationDropdown: ElementFinder;
 
-  @findBy("Css", "#priceTo")
+  @findBy(How.CSS, "#priceTo")
   private searchCarsPriceDropdwon: ElementFinder;
 
-  @findBy("Css", "#search-submit")
+  @findBy(How.CSS, "#search-submit")
   private searchCarsSearchSubmitButton: ElementFinder;
 
   //#endregion

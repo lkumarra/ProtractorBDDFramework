@@ -1,5 +1,5 @@
 import { ElementFinder } from "protractor";
-import { findBy } from "../../Utils/PageFactory";
+import { findBy, How } from '../../Utils/PageFactory';
 
 let homePageLocators: HomePageLocators;
 
@@ -16,28 +16,28 @@ export class HomePageLocators {
 
   //#region PageFactory
 
-  @findBy("Xpath", "//a[@data-gtm-label = 'top nav car buy and sell']")
+  @findBy(How.XPATH, "//a[@data-gtm-label = 'top nav car buy and sell']")
   private buySellMenu: ElementFinder;
 
-  @findBy("LinkText", "reviews")
+  @findBy(How.LINKTEXT, "reviews")
   private reviewsMenu: ElementFinder;
 
-  @findBy("LinkText", "news")
+  @findBy(How.LINKTEXT, "news")
   private newsMenu: ElementFinder;
 
-  @findBy("LinkText", "news")
+  @findBy(How.LINKTEXT, "news")
   private adviceMenu: ElementFinder;
 
-  @findBy("LinkText", "pricing + specs")
+  @findBy(How.LINKTEXT, "pricing + specs")
   private priceAndSpecMenu: ElementFinder;
 
-  @findBy("LinkText", "guides")
+  @findBy(How.LINKTEXT, "guides")
   private guidesMenu: ElementFinder;
 
-  @findBy("LinkText", "Search Cars")
+  @findBy(How.LINKTEXT, "Search Cars")
   private searchCarsMenu: ElementFinder;
 
-  @findBy("LinkText", "Used")
+  @findBy(How.LINKTEXT, "Used")
   private userCarMenu: ElementFinder;
 
   //#endregion
