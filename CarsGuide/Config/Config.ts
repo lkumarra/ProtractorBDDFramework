@@ -5,6 +5,8 @@ import * as nodemailer from "nodemailer";
 import { mailInfo } from "../Utils/MailInfo";
 import * as reporter from "cucumber-html-reporter";
 import * as process from "process";
+let exec = require("child_process");
+let locateChrome = require("locate-chrome");
 let reportOutput: string = process.cwd() + "/CarsGuide/TestReports/";
 export let config: Config = {
   SELENIUM_PROMISE_MANAGER: false,
@@ -30,6 +32,9 @@ export let config: Config = {
       "json:CarsGuide/TestReports/results.json",
       require.resolve("cucumber-pretty"),
     ],
+  },
+  onPrepare:() =>{
+    process.setMaxListeners(100)
   },
   onComplete: async () => {
     var options = {

@@ -11,8 +11,16 @@
 
 # Reports will gererated in :
 1. **TestReports Folder ("Html Reports")**
+2. **HTML Report will look like**
+[![HTML REPORT](./CarsGuide/SampleReport/HtmlReport.JPG)]
+
+# The Spec Report during run time will look like that :
+[![Spec Report](./CarsGuide/SampleReport/SpecReport.JPG)]
 
 # TestExecution can simply started by running:
 1. **TestRunner.exe("This executable will first install all required dependencies and start executation")**
 
 # Reports will send to mail after executation completed.
+
+# To Send HTML Report on Mail Set Username and Password as ENV Variable.
+For More info refer link https://github.com/lkumarra/ProtractorBDDFramework/blob/master/CarsGuide/Config/Config.ts
