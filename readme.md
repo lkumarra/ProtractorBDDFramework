@@ -9,15 +9,22 @@
 
 # Commands to execute the testcases.
 1. **npm install**
+
     To install all dependencies
+
 2. **npm run webdrivermanager:update**
+
     To update or install all executable binaries
+
 3. **npm run cucumbertest**
+
     To Start the Executation
 
 # Reports will gererated in :
 1. **TestReports Folder**
+
     Html Reports
+
 2. **HTML Report will look like**
 ![HTML REPORT](./CarsGuide/SampleReport/HtmlReport.JPG)
 
@@ -26,6 +33,7 @@
 
 # TestExecution can simply started by running:
 1. **TestRunner.exe**
+
     This executable will first install all required dependencies and then start executation.
 
 # Reports will send to mail after executation completed.
@@ -45,12 +53,19 @@ For More info refer link https://github.com/lkumarra/ProtractorBDDFramework/blob
 4. **Hooks**
     Contains the Hooks for Screenshot on test failure.
 5. **Pages**
+
     **Actions**
+
         This Folder Contains the Actions class for every page.
+
     **Locators**
+
         This Folder Contains the Locators Class for every page.
+
     **BasePage**
+
         This Folder Contains the Base Page.
+
 6. **Steps**
     This folder contains the StepDefinitation file.
 7. **TestReports**
@@ -67,4 +82,4 @@ For More info refer link https://github.com/lkumarra/ProtractorBDDFramework/blob
 [![Features](./CarsGuide/SampleReport/Features.JPG)](https://github.com/lkumarra/ProtractorBDDFramework/blob/master/CarsGuide/Features/SearchCars.feature)
 
 # Steps are Kept like that:
-[![Steps](./CarsGuide/SampleReport/Steps.JPG)]](https://github.com/lkumarra/ProtractorBDDFramework/blob/master/CarsGuide/Steps/SeachCarSteps.ts)
+[![Steps](./CarsGuide/SampleReport/Steps.JPG)](https://github.com/lkumarra/ProtractorBDDFramework/blob/master/CarsGuide/Steps/SeachCarSteps.ts)
