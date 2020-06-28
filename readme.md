@@ -12,10 +12,10 @@
 # Reports will gererated in :
 1. **TestReports Folder ("Html Reports")**
 2. **HTML Report will look like**
-[![HTML REPORT](./CarsGuide/SampleReport/HtmlReport.JPG)]
+![HTML REPORT](./CarsGuide/SampleReport/HtmlReport.JPG)
 
 # The Spec Report during run time will look like that :
-[![Spec Report](./CarsGuide/SampleReport/SpecReport.JPG)]
+![Spec Report](./CarsGuide/SampleReport/SpecReport.JPG)
 
 # TestExecution can simply started by running:
 1. **TestRunner.exe("This executable will first install all required dependencies and start executation")**
