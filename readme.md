@@ -61,18 +61,17 @@ For More info refer link https://github.com/lkumarra/ProtractorBDDFramework/blob
         Contains the Hooks for Screenshot on test failure.
 
 5. **Pages**
+    1. **Actions**
 
-        1. Actions
+            This Folder Contains action class.
 
-                This Folder Contains action class.
+    2. **Locators**
 
-        2. Locators
+            This Folder Contains Locators class.
 
-                This Folder Contains Locators class.
+    3. **BasePage**
 
-        3. BasePage
-
-                This Folder Contains Base Page Class.
+            This Folder Contains Base Page Class.
 
 6. **Steps**
 
