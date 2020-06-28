@@ -1,6 +1,6 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9ec86f6208a9445089531a7358758d1f)](https://www.codacy.com/manual/lkumarra/ProtractorBDDFramework?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lkumarra/ProtractorBDDFramework&amp;utm_campaign=Badge_Grade)
 
-![Protractor BDD](./CarsGuide/SampleReport/protarctor bdd.png)
+![Protractor BDD](./CarsGuide/SampleReport/Protractor.png)
 
 # Prerequisite to start execution:
 1. **Java (JDK)**
