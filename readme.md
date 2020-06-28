@@ -45,35 +45,44 @@ For More info refer link https://github.com/lkumarra/ProtractorBDDFramework/blob
 ![Spec Report](./CarsGuide/SampleReport/ProjectStructure.JPG)
 
 1. **CarsGuide**
-    Name of Project
+
+        Name of Project
+
 2. **Config**
-    Contains configuration file for protractor which has the code for reporting browser and mail.
+
+        Contains configuration file for protractor which has the code for reporting browser and mail.
+
 3. **Features**
-    Contains the Feature file
+
+        Contains the Feature file
+
 4. **Hooks**
-    Contains the Hooks for Screenshot on test failure.
+
+        Contains the Hooks for Screenshot on test failure.
+
 5. **Pages**
-
-    **Actions**
-
-        This Folder Contains the Actions class for every page.
-
-    **Locators**
-
-        This Folder Contains the Locators Class for every page.
-
-    **BasePage**
-
-        This Folder Contains the Base Page.
+	1.Actions
+		This Folder Contains action class.
+	2.Locators
+		This Folder Contains Locators class.
+	3.BasePage
+		This Folder Contains Base Page Class.
 
 6. **Steps**
-    This folder contains the StepDefinitation file.
+
+        This folder contains the StepDefinitation file.
+
 7. **TestReports**
-    All test reports will be generated in this folder.
+
+        All test reports will be generated in this folder.
+
 8. **TestSuite**
-    This Folder contains the suite of Steps and Feature.
+
+        This Folder contains the suite of Steps and Feature.
+
 9. **Utils**
-    This Folder contains the Utility and PageFactory class.
+
+        This Folder contains the Utility and PageFactory class.
 
 # Locators are kept like that:
 [![Locators](./CarsGuide/SampleReport/Locators.JPG)](https://github.com/lkumarra/ProtractorBDDFramework/blob/master/CarsGuide/Pages/Locators/CarsGuideHomePageLocators.ts)
