@@ -8,19 +8,16 @@ import {
   by,
 } from "protractor";
 let until: ProtractorExpectedConditions = ExpectedConditions;
-let utilities: Utilities;
 import * as chai from "chai";
 import { element } from "protractor";
 const expect = chai.expect;
 export class Utilities {
+  private static _utilities: Utilities = new Utilities();
   /**
    * Return the instance of Utilities class.
    */
   public static getUtilitiesInstane(): Utilities {
-    if (utilities == null) {
-      utilities = new Utilities();
-    }
-    return utilities;
+    return this._utilities;
   }
   /**
    * Wait until element is in  clickable state.
@@ -117,18 +114,16 @@ export class Utilities {
    * Perform enter operation on locator
    * @param locator Locator on which action has performed.
    */
-  public async pressENTER(locator: Locator) {
-    let element: ElementFinder = await this.getElementFinder(locator);
-    await element.sendKeys(Key.ENTER);
+  public async pressENTER(locator: ElementFinder) {
+    await locator.sendKeys(Key.ENTER);
   }
 
   /**
    * Perform space operation on locator
    * @param locator Locator on which action has performed.
    */
-  public async pressSPACE(locator: Locator) {
-    let element: ElementFinder = await this.getElementFinder(locator);
-    await element.sendKeys(Key.SPACE);
+  public async pressSPACE(locator: ElementFinder) {
+    await locator.sendKeys(Key.SPACE);
   }
 
   /**
@@ -190,5 +185,14 @@ export class Utilities {
    */
   public static async getTitle(): Promise<string> {
     return await browser.getTitle();
+  }
+
+  /**
+   * Perform click action on elementfinder using javascript.
+   * @param locator Locator to click javascript.
+   */
+  public async jsClick(locator: ElementFinder) {
+    await this.elementToBeVisibleWait(locator);
+    await browser.executeScript("arguments[0].click()", locator);
   }
 }

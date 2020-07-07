@@ -2,17 +2,16 @@ import { Utilities } from "../../Utils/TestUtils";
 import { SearchCarsLocators } from "../Locators/CarsGuideSearchCarsLocators";
 import { LogUtils } from "../../LogManager/LogUtils";
 
-let utilities: Utilities = Utilities.getUtilitiesInstane();
-let searchCarsLocators: SearchCarsLocators = SearchCarsLocators.getSearchCarsLocatorsInstance();
-
 export class SearchCarsActions {
+  private _utilities: Utilities = Utilities.getUtilitiesInstane();
+  private _searchCarsLocators: SearchCarsLocators = SearchCarsLocators.getSearchCarsLocatorsInstance();
   /**
    * Select cars make,
    * @param carsMake Cars make to select.
    */
   public async selectSearchCarMake(carsMake: string) {
-    await utilities.selectByVisibleText(
-      searchCarsLocators.getSerchCarsMakeDropdownLocator(),
+    await this._utilities.selectByVisibleText(
+      this._searchCarsLocators.getSerchCarsMakeDropdownLocator(),
       carsMake
     );
     LogUtils.debugMessage(
@@ -26,8 +25,8 @@ export class SearchCarsActions {
    * @param model Car model to select.
    */
   public async selectSerchCarModel(model: string) {
-    await utilities.selectByVisibleText(
-      searchCarsLocators.getSearchCarsModelDropdownLocator(),
+    await this._utilities.selectByVisibleText(
+      this._searchCarsLocators.getSearchCarsModelDropdownLocator(),
       model
     );
     LogUtils.debugMessage(
@@ -41,8 +40,8 @@ export class SearchCarsActions {
    * @param location location to select.
    */
   public async selectSearchCarLocation(location: string) {
-    await utilities.selectByVisibleText(
-      searchCarsLocators.getSeachCarsLocationDropdownLocator(),
+    await this._utilities.selectByVisibleText(
+      this._searchCarsLocators.getSeachCarsLocationDropdownLocator(),
       location
     );
     LogUtils.debugMessage(
@@ -56,8 +55,8 @@ export class SearchCarsActions {
    * @param price Price to select.
    */
   public async selectSearchCarPrice(price: string) {
-    await utilities.selectByVisibleText(
-      searchCarsLocators.getSearchCarsPriceDropdwonLocator(),
+    await this._utilities.selectByVisibleText(
+      this._searchCarsLocators.getSearchCarsPriceDropdwonLocator(),
       price
     );
     LogUtils.debugMessage(
@@ -70,8 +69,8 @@ export class SearchCarsActions {
    * Click on find ny next car.
    */
   public async clickOnFindMyNextCar() {
-    await utilities.clickOnElement(
-      searchCarsLocators.getSearchCarsSearchSubmitButtonLocator()
+    await this._utilities.clickOnElement(
+      this._searchCarsLocators.getSearchCarsSearchSubmitButtonLocator()
     );
     LogUtils.debugMessage(
       "Clicked on Find My Next Car",

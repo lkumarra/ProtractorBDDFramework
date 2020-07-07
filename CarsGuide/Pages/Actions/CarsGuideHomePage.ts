@@ -4,15 +4,17 @@ import { SearchCarsActions } from "./CarsGuideSearchCars";
 import { UsedCarAction } from "./CarsGuideUsedCars";
 import { LogUtils } from "../../LogManager/LogUtils";
 
-let utilities: Utilities = Utilities.getUtilitiesInstane();
-let homePageLocatos: HomePageLocators = HomePageLocators.getHomePageLocatorInstance();
-
 export class HomePageActions {
+  private _utilities: Utilities = Utilities.getUtilitiesInstane();
+  private _homePageLocatos: HomePageLocators = HomePageLocators.getHomePageLocatorInstance();
+
   /**
    * Move to buy+sell menu.
    */
   public async moveToBuyAndSale() {
-    await utilities.moveToElement(homePageLocatos.getBuySellMenuLocator());
+    await this._utilities.moveToElement(
+      this._homePageLocatos.getBuySellMenuLocator()
+    );
     LogUtils.debugMessage("Move to buy+sale Menu", HomePageActions.name);
   }
 
@@ -20,7 +22,9 @@ export class HomePageActions {
    * Move to reviews menu.
    */
   public async moveToReviews() {
-    await utilities.moveToElement(homePageLocatos.getReviewsMenuLocator());
+    await this._utilities.moveToElement(
+      this._homePageLocatos.getReviewsMenuLocator()
+    );
     LogUtils.debugMessage("Move to reviews Menu", HomePageActions.name);
   }
 
@@ -28,7 +32,9 @@ export class HomePageActions {
    * Move to news menu.
    */
   public async moveToNews() {
-    await utilities.moveToElement(homePageLocatos.getNewsMenuLocator());
+    await this._utilities.moveToElement(
+      this._homePageLocatos.getNewsMenuLocator()
+    );
     LogUtils.debugMessage("Move to news Menu", HomePageActions.name);
   }
 
@@ -36,7 +42,9 @@ export class HomePageActions {
    * Move to advice menu.
    */
   public async moveToAdvice() {
-    await utilities.moveToElement(homePageLocatos.getAdviceMenuLocator());
+    await this._utilities.moveToElement(
+      this._homePageLocatos.getAdviceMenuLocator()
+    );
     LogUtils.debugMessage("Move to advice Menu", HomePageActions.name);
   }
 
@@ -44,7 +52,9 @@ export class HomePageActions {
    * Move to pricing and spec menu.
    */
   public async moveToPricingAndSpec() {
-    await utilities.moveToElement(homePageLocatos.getPriceAndSpecMenuLocator());
+    await this._utilities.moveToElement(
+      this._homePageLocatos.getPriceAndSpecMenuLocator()
+    );
     LogUtils.debugMessage(
       "Move to pricing and spec Menu",
       HomePageActions.name
@@ -55,7 +65,9 @@ export class HomePageActions {
    * Move to advice.
    */
   public async moveToGuides() {
-    await utilities.moveToElement(homePageLocatos.getGuidesMenuLocator());
+    await this._utilities.moveToElement(
+      this._homePageLocatos.getGuidesMenuLocator()
+    );
     LogUtils.debugMessage("Move to guides Menu", HomePageActions.name);
   }
 
@@ -63,7 +75,9 @@ export class HomePageActions {
    * click on search cars options .
    */
   public async clickOnSearchCars(): Promise<SearchCarsActions> {
-    await utilities.clickOnElement(homePageLocatos.getSearchCarsMenuLocator());
+    await this._utilities.clickOnElement(
+      this._homePageLocatos.getSearchCarsMenuLocator()
+    );
     LogUtils.debugMessage("Clicked on Search cars", HomePageActions.name);
     return new SearchCarsActions();
   }
@@ -73,7 +87,9 @@ export class HomePageActions {
    */
   public async clickOnUsedCars(): Promise<UsedCarAction> {
     LogUtils.debugMessage("Clicked on used cars", HomePageActions.name);
-    await utilities.clickOnElement(homePageLocatos.getUsedCarsMenuLocator());
+    await this._utilities.clickOnElement(
+      this._homePageLocatos.getUsedCarsMenuLocator()
+    );
     return new UsedCarAction();
   }
 }

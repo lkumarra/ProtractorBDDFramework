@@ -2,17 +2,16 @@ import { Utilities } from "../../Utils/TestUtils";
 import { UsedCarLocators } from "../Locators/CarsGuideUsesCarsLocators";
 import { LogUtils } from "../../LogManager/LogUtils";
 
-let utilities: Utilities = Utilities.getUtilitiesInstane();
-let usedCarLocators: UsedCarLocators = UsedCarLocators.getUsedCarLocatorInstance();
-
 export class UsedCarAction {
+  private _utilities: Utilities = Utilities.getUtilitiesInstane();
+  private _usedCarLocators: UsedCarLocators = UsedCarLocators.getUsedCarLocatorInstance();
   /**
    * Select car make on used car page.
    * @param make Make to select.
    */
   public async selectUsedCarMake(make: string) {
-    await utilities.selectByVisibleText(
-      usedCarLocators.getUsedCarsMakeDropdownLocator(),
+    await this._utilities.selectByVisibleText(
+      this._usedCarLocators.getUsedCarsMakeDropdownLocator(),
       make
     );
     LogUtils.debugMessage(
@@ -26,8 +25,8 @@ export class UsedCarAction {
    * @param model Model to select.
    */
   public async selectUsedCarModel(model: string) {
-    await utilities.selectByVisibleText(
-      usedCarLocators.getUsedCarsModelDropdownLocator(),
+    await this._utilities.selectByVisibleText(
+      this._usedCarLocators.getUsedCarsModelDropdownLocator(),
       model
     );
     LogUtils.debugMessage(
@@ -41,8 +40,8 @@ export class UsedCarAction {
    * @param location location to select.
    */
   public async selectUsedCarLocation(location: string) {
-    await utilities.selectByVisibleText(
-      usedCarLocators.getUsedCarsLocationDropdownLocator(),
+    await this._utilities.selectByVisibleText(
+      this._usedCarLocators.getUsedCarsLocationDropdownLocator(),
       location
     );
     LogUtils.debugMessage(
@@ -56,8 +55,8 @@ export class UsedCarAction {
    * @param price price to select.
    */
   public async seletUsedCarPrice(price: string) {
-    await utilities.selectByVisibleText(
-      usedCarLocators.getUsedCarsPriceDropdwonLocator(),
+    await this._utilities.selectByVisibleText(
+      this._usedCarLocators.getUsedCarsPriceDropdwonLocator(),
       price
     );
     LogUtils.debugMessage(
@@ -70,8 +69,8 @@ export class UsedCarAction {
    * Click on find my next car on used car page.
    */
   public async clickOnFindMyNextCar() {
-    await utilities.clickOnElement(
-      usedCarLocators.getUsedCarsSearchSubmitButtonLocator()
+    await this._utilities.clickOnElement(
+      this._usedCarLocators.getUsedCarsSearchSubmitButtonLocator()
     );
     LogUtils.debugMessage("Clicked on Find My Next Car", UsedCarAction.name);
   }

@@ -1,35 +1,31 @@
 import { ElementFinder } from "protractor";
-import { findBy, How } from '../../Utils/PageFactory';
-
-let usedCarLocators: UsedCarLocators;
+import { findBy, How } from "../../Utils/PageFactory";
 
 export class UsedCarLocators {
+  private static _instance: UsedCarLocators = new UsedCarLocators();
   /**
    * Return the instance of UsedCarLocators page.
    */
   public static getUsedCarLocatorInstance(): UsedCarLocators {
-    if (usedCarLocators == null) {
-      usedCarLocators = new UsedCarLocators();
-    }
-    return usedCarLocators;
+    return this._instance;
   }
 
   //#region  PageFactoory
 
   @findBy(How.CSS, "#makes")
-  private usedCarsMakeDropdown: ElementFinder;
+  private _usedCarsMakeDropdown: ElementFinder;
 
   @findBy(How.CSS, "#models")
-  private usedCarsModelDropdown: ElementFinder;
+  private _usedCarsModelDropdown: ElementFinder;
 
   @findBy(How.CSS, "#locations")
-  private usedCarsLocationDropdown: ElementFinder;
+  private _usedCarsLocationDropdown: ElementFinder;
 
   @findBy(How.CSS, "#priceTo")
-  private usedCarsPriceDropdwon: ElementFinder;
+  private _usedCarsPriceDropdwon: ElementFinder;
 
   @findBy(How.CSS, "#search-submit")
-  private usedCarsSearchSubmitButton: ElementFinder;
+  private _usedCarsSearchSubmitButton: ElementFinder;
 
   //#endregion
 
@@ -39,35 +35,35 @@ export class UsedCarLocators {
    * Return the locator of cars make dropdown on usedcars page.
    */
   public getUsedCarsMakeDropdownLocator(): ElementFinder {
-    return this.usedCarsMakeDropdown;
+    return this._usedCarsMakeDropdown;
   }
 
   /**
    * Return the locator of cars model dropdown on usedcars page.
    */
   public getUsedCarsModelDropdownLocator(): ElementFinder {
-    return this.usedCarsModelDropdown;
+    return this._usedCarsModelDropdown;
   }
 
   /**
    * Return the locator of cars location dropdown on usedcars page.
    */
   public getUsedCarsLocationDropdownLocator(): ElementFinder {
-    return this.usedCarsLocationDropdown;
+    return this._usedCarsLocationDropdown;
   }
 
   /**
    * Return the locator of cars price dropdown loactor on usedcars page.
    */
   public getUsedCarsPriceDropdwonLocator(): ElementFinder {
-    return this.usedCarsPriceDropdwon;
+    return this._usedCarsPriceDropdwon;
   }
 
   /**
    * Return the locator of Find My Next Cars Button on used cars page.
    */
   public getUsedCarsSearchSubmitButtonLocator(): ElementFinder {
-    return this.usedCarsSearchSubmitButton;
+    return this._usedCarsSearchSubmitButton;
   }
 
   //#endregion
