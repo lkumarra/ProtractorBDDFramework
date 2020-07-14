@@ -18,7 +18,7 @@
 
 3. **npm run cucumbertest**
 
-    To Start the Executation
+    To Start the Execution
 
 # Reports will gererated in :
 1. **TestReports Folder**
