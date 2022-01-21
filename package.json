@@ -26,7 +26,7 @@
     "just-handlebars-helpers": "1.0.16",
     "locate-chrome": "0.1.1",
     "childprocess": "2.0.2",
-    "log4js": "6.1.2",
+    "log4js": "6.4.0",
     "move-file": "2.0.0",
     "nodemailer": "6.4.16",
     "npm": "6.14.6",
